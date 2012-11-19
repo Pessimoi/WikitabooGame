@@ -15,6 +15,7 @@ public class QuestionController {
     
     @RequestMapping(value = "addquestion", method = RequestMethod.POST)
     public String addQuestions(@RequestParam(value = "question", required = true) String question) {
+        System.out.println("YO YO YO");
         return "";
     }
     
