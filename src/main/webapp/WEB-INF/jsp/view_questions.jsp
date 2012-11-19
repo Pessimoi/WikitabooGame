@@ -25,5 +25,12 @@
             </form>
         </c:forEach>
     </p>
+    <p>All questions and answers sorted by rank:</p>
+    <c:forEach var="question" items="${questions}">
+        <p>Question: ${question.questionString}</p>
+        <c:forEach var="answer" items="${question.answerList}">
+            <p>Answers to the question: ${answer.answerString}</p>
+        </c:forEach>
+    </c:forEach>
 </body>
 </html>
