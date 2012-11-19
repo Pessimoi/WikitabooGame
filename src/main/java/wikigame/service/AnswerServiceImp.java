@@ -33,6 +33,11 @@ public class AnswerServiceImp implements AnswerService {
         repo.delete(id);
     }
 
+    @Override
+    public void newAnswerToQuestionFromString(Long questionid, String answer) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
     
     
 }
