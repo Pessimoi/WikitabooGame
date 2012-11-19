@@ -1,13 +1,14 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package wikigame.controller;
 
-/**
- *
- * @author kami
- */
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
 public class QuestionController {
+    
+    @RequestMapping("addquestions")
+    public String viewAddQuestionPage() {
+        return "add_questions";
+    }
     
 }
