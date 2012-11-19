@@ -4,6 +4,7 @@
  */
 package wikigame.content;
 
+import java.io.Serializable;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -15,7 +16,7 @@ import javax.persistence.Id;
  * @author vpeltoni
  */
 @Entity(name = "ANSWER")
-public class Answer {
+public class Answer implements Serializable {
     
     @Id
     @Column
