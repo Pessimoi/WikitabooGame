@@ -2,6 +2,7 @@ package wikigame.service;
 
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import wikigame.content.Question;
 import wikigame.repository.QuestionRepository;
 
@@ -9,7 +10,8 @@ import wikigame.repository.QuestionRepository;
  *
  * @author vpeltoni
  */
-public class QuestionService {
+@Service
+public class QuestionServiceImp {
     
     @Autowired
     private QuestionRepository repo;
@@ -28,6 +30,10 @@ public class QuestionService {
     
     public void deleteQuestion(Long id){
         repo.delete(id);
+    }
+
+    public void newQuestionFromString(String question) {
+        throw new UnsupportedOperationException("Not yet implemented");
     }
 
     

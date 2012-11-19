@@ -1,7 +1,3 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package wikigame.content;
 
 import javax.persistence.Column;
@@ -9,11 +5,9 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
-/**
- *
- * @author vpeltoni
- */
+
 @Entity(name = "ANSWER")
 public class Answer {
     
@@ -24,6 +18,9 @@ public class Answer {
     
     @Column
     private String answerString;
+    
+    @ManyToOne
+    private Question question;
 
     /**
      * @return the id
@@ -52,6 +49,15 @@ public class Answer {
     public void setAnswerString(String answerString) {
         this.answerString = answerString;
     }
+
+    public Question getQuestion() {
+        return question;
+    }
+
+    public void setQuestion(Question question) {
+        this.question = question;
+    }
+    
     
     
 }

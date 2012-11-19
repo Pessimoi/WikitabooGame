@@ -27,8 +27,8 @@ public class Question {
     @Column
     private String questionString;
     
-    @OneToMany(mappedBy = "Question")
-    private List<Answer> AnswerList;
+    @OneToMany(mappedBy = "question")
+    private List<Answer> answerList;
 
     /**
      * @return the id
@@ -62,14 +62,14 @@ public class Question {
      * @return the AnswerList
      */
     public List<Answer> getAnswerList() {
-        return AnswerList;
+        return answerList;
     }
 
     /**
      * @param AnswerList the AnswerList to set
      */
     public void setAnswerList(List<Answer> AnswerList) {
-        this.AnswerList = AnswerList;
+        this.answerList = AnswerList;
     }
     
 }

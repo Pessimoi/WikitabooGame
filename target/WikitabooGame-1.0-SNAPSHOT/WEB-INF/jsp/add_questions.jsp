@@ -11,7 +11,7 @@
             <p>Question 1:</p>
             <p>
                 <label for="question"></label>
-                <textarea cols="80" id="topic" name="topic" rows="5"></textarea>
+                <textarea cols="80" id="question" name="question" rows="5"></textarea>
             </p>
             <p>
                 <input type="submit" value="Submit" />
