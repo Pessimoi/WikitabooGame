@@ -4,15 +4,70 @@
  */
 package wikigame.content;
 
+import java.util.List;
+import javax.persistence.Column;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+
 /**
  *
  * @author vpeltoni
  */
 public class Question {
     
+    @Id
+    @Column
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
+    
+    @Column
     private String questionString;
-    private String questioner;
     
-    
+    @OneToMany(mappedBy = "Question")
+    private List<Answer> AnswerList;
+
+    /**
+     * @return the id
+     */
+    public Long getId() {
+        return id;
+    }
+
+    /**
+     * @param id the id to set
+     */
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    /**
+     * @return the questionString
+     */
+    public String getQuestionString() {
+        return questionString;
+    }
+
+    /**
+     * @param questionString the questionString to set
+     */
+    public void setQuestionString(String questionString) {
+        this.questionString = questionString;
+    }
+
+    /**
+     * @return the AnswerList
+     */
+    public List<Answer> getAnswerList() {
+        return AnswerList;
+    }
+
+    /**
+     * @param AnswerList the AnswerList to set
+     */
+    public void setAnswerList(List<Answer> AnswerList) {
+        this.AnswerList = AnswerList;
+    }
     
 }
