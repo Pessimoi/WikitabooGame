@@ -13,5 +13,7 @@ public interface AnswerService {
     public Answer getAnswer(Long id);
     
     public void deleteAnswer(Long id);
+
+    public void newAnswerToQuestionFromString(Long questionid, String answer);
     
 }

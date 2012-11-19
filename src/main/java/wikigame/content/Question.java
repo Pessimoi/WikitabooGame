@@ -31,9 +31,6 @@ public class Question implements Serializable {
     @OneToMany(mappedBy = "question")
 
     private List<Answer> answerList;
-
-    
-    //--------------------------------------
     
     
     public Long getId() {
@@ -58,6 +55,10 @@ public class Question implements Serializable {
 
     public void setAnswerList(List<Answer> AnswerList) {
         this.answerList = AnswerList;
+    }
+    
+    public void addAnswerToList(Answer answer){
+        this.answerList.add(answer);
     }
     
 }

@@ -25,10 +25,6 @@ public class QuestionServiceImp implements QuestionService {
     
     @Override
     public List<Question> getQuestionList() {
-        System.out.println("GETQUESTIONLIST WAS CALLED");
-        for(Question q : repo.findAll()){
-            System.out.println(q.getQuestionString());
-        }
         return (List<Question>) repo.findAll();
     }
     
