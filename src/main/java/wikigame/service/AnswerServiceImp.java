@@ -2,6 +2,7 @@ package wikigame.service;
 
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import wikigame.content.Answer;
 import wikigame.repository.AnswerRepository;
 
@@ -9,6 +10,7 @@ import wikigame.repository.AnswerRepository;
  *
  * @author vpeltoni
  */
+@Service
 public class AnswerServiceImp implements AnswerService {
     
     @Autowired
