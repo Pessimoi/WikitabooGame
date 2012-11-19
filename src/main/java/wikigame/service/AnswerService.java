@@ -12,7 +12,7 @@ import wikigame.content.Answer;
  * @author vpeltoni
  */
 public interface AnswerService {
-    
+
     public void saveAnswer(Answer answer);
     
     public List<Answer> getAnswerList();
