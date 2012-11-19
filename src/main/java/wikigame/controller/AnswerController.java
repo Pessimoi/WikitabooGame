@@ -17,6 +17,6 @@ public class AnswerController {
     public String addQuestions(@RequestParam(value = "answer", required = true) String answer,
                                 @RequestParam(value = "questionid", required = true) Long questionid) {
         answerService.newAnswerToQuestionFromString(questionid,answer);
-        return "";
+        return "redirect:/app/showquestions";
     }
 }
