@@ -6,13 +6,14 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
-import wikigame.service.QuestionServiceImp;
+import wikigame.service.QuestionService;
 
 @Controller
 public class QuestionController {
     
     @Autowired
-    private QuestionServiceImp questionService;
+    private QuestionService questionService;
+
     
     @RequestMapping("addquestionpage")
     public String viewAddQuestionPage() {
