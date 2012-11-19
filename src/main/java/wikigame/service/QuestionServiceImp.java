@@ -1,8 +1,10 @@
 package wikigame.service;
 
+import java.util.ArrayList;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import wikigame.content.Answer;
 import wikigame.content.Question;
 import wikigame.repository.QuestionRepository;
 
@@ -23,6 +25,10 @@ public class QuestionServiceImp implements QuestionService {
     
     @Override
     public List<Question> getQuestionList() {
+        System.out.println("GETQUESTIONLIST WAS CALLED");
+        for(Question q : repo.findAll()){
+            System.out.println(q.getQuestionString());
+        }
         return (List<Question>) repo.findAll();
     }
     
@@ -37,8 +43,11 @@ public class QuestionServiceImp implements QuestionService {
     }
 
     @Override
-    public void newQuestionFromString(String question) {
-        throw new UnsupportedOperationException("Not supported yet.");
+    public void newQuestionFromString(String questionString) {
+        Question q = new Question();
+        q.setQuestionString(questionString);
+        q.setAnswerList(new ArrayList<Answer>());
+        saveQuestion(q);
     }
 
     
