@@ -4,10 +4,14 @@
  */
 package wikigame.repository;
 
+import org.springframework.data.repository.CrudRepository;
+import wikigame.content.Question;
+
+
 /**
  *
  * @author vpeltoni
  */
-public class QuestionRepository {
+public interface QuestionRepository extends CrudRepository<Question, Long> {
     
 }
