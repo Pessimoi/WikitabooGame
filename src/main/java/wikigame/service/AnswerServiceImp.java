@@ -6,10 +6,7 @@ import org.springframework.stereotype.Service;
 import wikigame.content.Answer;
 import wikigame.repository.AnswerRepository;
 
-/**
- *
- * @author vpeltoni
- */
+
 @Service
 public class AnswerServiceImp implements AnswerService {
     

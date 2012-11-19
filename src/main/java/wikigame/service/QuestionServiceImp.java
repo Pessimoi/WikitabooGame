@@ -36,6 +36,11 @@ public class QuestionServiceImp implements QuestionService {
         repo.delete(id);
     }
 
+    @Override
+    public void newQuestionFromString(String question) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
     
     
 }

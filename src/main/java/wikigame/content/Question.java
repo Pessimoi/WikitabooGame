@@ -29,7 +29,8 @@ public class Question implements Serializable {
     private String questionString;
     
     @OneToMany(mappedBy = "question")
-    private List<Answer> AnswerList;
+
+    private List<Answer> answerList;
 
     
     //--------------------------------------
@@ -52,11 +53,11 @@ public class Question implements Serializable {
     }
 
     public List<Answer> getAnswerList() {
-        return AnswerList;
+        return answerList;
     }
 
     public void setAnswerList(List<Answer> AnswerList) {
-        this.AnswerList = AnswerList;
+        this.answerList = AnswerList;
     }
     
 }

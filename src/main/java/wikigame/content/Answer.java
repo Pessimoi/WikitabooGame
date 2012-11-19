@@ -1,7 +1,3 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package wikigame.content;
 
 import java.io.Serializable;
@@ -10,11 +6,9 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
-/**
- *
- * @author vpeltoni
- */
+
 @Entity(name = "ANSWER")
 public class Answer implements Serializable {
     
@@ -27,7 +21,7 @@ public class Answer implements Serializable {
     @Column
     private String answerString;
     
-    @Column
+    @ManyToOne
     private Question question;
 
     
@@ -57,6 +51,5 @@ public class Answer implements Serializable {
     public void setQuestion(Question question) {
         this.question = question;
     }
-    
     
 }
