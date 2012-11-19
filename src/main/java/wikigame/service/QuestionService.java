@@ -1,35 +1,24 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package wikigame.service;
 
 import java.util.List;
-import org.springframework.beans.factory.annotation.Autowired;
 import wikigame.content.Question;
-import wikigame.repository.QuestionRepository;
 
 /**
  *
  * @author vpeltoni
  */
-public class QuestionService {
+public interface QuestionService {
     
-    @Autowired
-    private QuestionRepository repo;
+    public void saveQuestion(Question question);
     
-    public void saveQuestion(Question question) {
-        repo.save(question);
-    }
+    public List<Question> getQuestionList();
     
-    public List<Question> getQuestionList() {
-        return (List<Question>) repo.findAll();
-    }
+    public Question getQuestion(Long id);
     
-    public Question getQuestion(Long id) {
-        return repo.findOne(id);
-    }
-    
-    public void deleteQuestion(Long id){
-        repo.delete(id);
-    }
+    public void deleteQuestion(Long id);
 
-    
-    
 }
