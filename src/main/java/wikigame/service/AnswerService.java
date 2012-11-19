@@ -9,6 +9,7 @@ import wikigame.repository.AnswerRepository;
  *
  * @author vpeltoni
  */
+@Service
 public class AnswerService {
     
     @Autowired
