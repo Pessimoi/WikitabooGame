@@ -13,8 +13,6 @@ public class AnswerController {
     @Autowired
     private AnswerService answerService;
     
-    
-
     @RequestMapping(value = "addanswer", method = RequestMethod.POST)
     public String addQuestions(@RequestParam(value = "answer", required = true) String answer,
                                 @RequestParam(value = "questionid", required = true) Long questionid) {
