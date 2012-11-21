@@ -1,0 +1,28 @@
+root { 
+    display: block;
+}
+
+*
+{
+    border-color:#98bf21;
+    border-radius: 15px;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 100%;
+}
+
+h1
+{
+    border-style:solid; 
+    border-spacing:10px 50px;
+}
+
+h3
+{
+    border-style:dotted; 
+    border-spacing:10px 50px;
+}
+
+textarea
+{
+    border-style:solid double; 
+}

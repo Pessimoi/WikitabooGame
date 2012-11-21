@@ -5,8 +5,19 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Wikitaboo game</title>
+        <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/style.css">
     </head>
     <body>
+        <h1>Markov Chains</h1>
+        <pre>
+"The simplest Markov model is the Markov chain. It models the state of a system 
+with a random variable that changes through time. In this context, the Markov 
+property suggests that the distribution for this variable depends only on the 
+distribution of the previous state. An example use of a Markov chain is Markov 
+Chain Monte Carlo, which uses the Markov property to prove that a particular 
+method for performing a random walk will sample from the joint distribution of 
+a system." -Wikipedia 
+        </pre>
         <h1>View questions</h1>
         <p>Here are your questions:</p>
 
@@ -25,9 +36,9 @@
             </form>
         </c:forEach>
     </p>
-    <p>All questions and answers sorted by rank:</p>
+    <h2>All questions and answers sorted by rank:</h2>
     <c:forEach var="question" items="${questions}">
-        <p>Question: ${question.questionString}</p>
+        <h3>Question: ${question.questionString}</h3>
         <c:forEach var="answer" items="${question.answerList}">
             <p>Answers to the question: ${answer.answerString}</p>
         </c:forEach>

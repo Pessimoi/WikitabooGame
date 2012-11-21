@@ -45,6 +45,7 @@ public class AnswerServiceImp implements AnswerService {
         Question question = questionRepository.findOne(questionid);
         answer.setQuestion(question);
         question.addAnswerToList(answer);
+        
         answerRepository.save(answer);
         questionRepository.save(question);
     }
