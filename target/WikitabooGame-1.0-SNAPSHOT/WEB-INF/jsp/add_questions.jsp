@@ -15,7 +15,7 @@ property suggests that the distribution for this variable depends only on the
 distribution of the previous state. An example use of a Markov chain is Markov 
 Chain Monte Carlo, which uses the Markov property to prove that a particular 
 method for performing a random walk will sample from the joint distribution of 
-a system." -Wikipedia 
+a system." -Wikipedia
         </pre>
         <h1>Add questions</h1>
         <form action="addquestions" method="POST">

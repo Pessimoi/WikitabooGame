@@ -16,16 +16,14 @@ property suggests that the distribution for this variable depends only on the
 distribution of the previous state. An example use of a Markov chain is Markov 
 Chain Monte Carlo, which uses the Markov property to prove that a particular 
 method for performing a random walk will sample from the joint distribution of 
-a system." -Wikipedia 
+a system." -Wikipedia
         </pre>
-        <h1>View questions</h1>
-        <p>Here are your questions:</p>
-
+        <h2>Your questions</h2>
         <p>
         <c:forEach var="question" items="${questions}">
-            <p>${question.questionString}</p>
+            <h3>${question.questionString}</h3>
             <form action="addanswer" method="POST">
-                <p>Answer to question:</p>
+                <p>Answer this question:</p>
                 <p>
                     <textarea cols="80" id="answer" name="answer" rows="5"></textarea>
                 </p>
@@ -36,11 +34,11 @@ a system." -Wikipedia
             </form>
         </c:forEach>
     </p>
-    <h2>All questions and answers sorted by rank:</h2>
+    <h2>All questions and answers sorted by rank</h2>
     <c:forEach var="question" items="${questions}">
         <h3>Question: ${question.questionString}</h3>
         <c:forEach var="answer" items="${question.answerList}">
-            <p>Answers to the question: ${answer.answerString}</p>
+            <p>Answer this question: ${answer.answerString}</p>
         </c:forEach>
     </c:forEach>
 
